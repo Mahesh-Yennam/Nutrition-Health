@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFQ8M0VSFN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RFQ8M0VSFN');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Vital Fuel: Human Nutrition & Nutrient Health Explorer</title>
+  <meta name="description" content="Explore essential human nutrients, vitamins, minerals, daily recommended allowances (RDA/DRI), whole food sources, nutrient synergies, and meal tracking telemetry.">
+  <link rel="canonical" href="https://mahesh-yennam.github.io/Nutrition-Health/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mahesh-yennam.github.io/Nutrition-Health/">
+  <meta property="og:title" content="The Vital Fuel: Human Nutrition & Nutrient Health Explorer">
+  <meta property="og:description" content="Explore essential human nutrients, vitamins, minerals, daily recommended allowances (RDA/DRI), whole food sources, nutrient synergies, and meal tracking telemetry.">
+  <meta property="og:image" content="https://mahesh-yennam.github.io/Nutrition-Health/preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="The Vital Fuel: Human Nutrition & Nutrient Health Explorer">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://mahesh-yennam.github.io/Nutrition-Health/">
+  <meta name="twitter:title" content="The Vital Fuel: Human Nutrition & Nutrient Health Explorer">
+  <meta name="twitter:description" content="Explore essential human nutrients, vitamins, minerals, daily recommended allowances (RDA/DRI), whole food sources, nutrient synergies, and meal tracking telemetry.">
+  <meta name="twitter:image" content="https://mahesh-yennam.github.io/Nutrition-Health/preview.png">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "The Vital Fuel: Human Nutrition & Nutrient Health Explorer",
+    "url": "https://mahesh-yennam.github.io/Nutrition-Health/",
+    "description": "Explore essential human nutrients, vitamins, minerals, daily recommended allowances (RDA/DRI), whole food sources, and meal telemetry.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Navigation & Cockpit Ribbon -->
+  <header class="app-header">
+    <div class="header-inner container">
+      <div class="brand-group">
+        <a href="https://mahesh-yennam.github.io/Gamility/explorer.html" class="portal-return-link" title="Return to Gamility Explorer Hub">
+          <span class="return-arrow">←</span> Explorer Hub
+        </a>
+        <div class="brand-identity">
+          <div class="brand-avatar" aria-hidden="true">🥑</div>
+          <div>
+            <h1 class="brand-title">The Vital Fuel</h1>
+            <p class="brand-subtitle">Human Nutrition &amp; Nutrient Health Explorer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Search & Sound Toggles -->
+      <div class="header-actions">
+        <div class="header-search-wrap">
+          <span class="search-lens" aria-hidden="true">🔍</span>
+          <input type="search" id="globalNutriSearch" class="search-input" placeholder="Search nutrients (e.g., B12, Iron) or foods..." aria-label="Search nutrients and foods">
+        </div>
+        <button type="button" id="btnAudioToggle" class="btn-icon" aria-label="Toggle procedural audio" title="Toggle Sound Feedback">
+          <span id="audioIcon">🔊</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Module Tabs -->
+    <nav class="nav-tab-ribbon container" aria-label="Explorer Module Navigation">
+      <div class="tab-scroll-track" role="tablist">
+        <button type="button" class="nav-tab active" data-view="viewNutrients" role="tab" aria-selected="true">
+          <span class="tab-ico">🧪</span> Nutrient Taxonomy
+        </button>
+        <button type="button" class="nav-tab" data-view="viewFoods" role="tab" aria-selected="false">
+          <span class="tab-ico">🥑</span> Whole Foods Catalog
+        </button>
+        <button type="button" class="nav-tab" data-view="viewCalculator" role="tab" aria-selected="false">
+          <span class="tab-ico">⚖️</span> Personalized RDA
+        </button>
+        <button type="button" class="nav-tab" data-view="viewPlate" role="tab" aria-selected="false">
+          <span class="tab-ico">🍽️</span> Daily Plate Tracker
+        </button>
+        <button type="button" class="nav-tab" data-view="viewSynergies" role="tab" aria-selected="false">
+          <span class="tab-ico">⚡</span> Power Pairs &amp; Synergies
+        </button>
+        <button type="button" class="nav-tab" data-view="viewSymptoms" role="tab" aria-selected="false">
+          <span class="tab-ico">🩺</span> Deficiency Guide
+        </button>
+        <button type="button" class="nav-tab" data-view="viewQuiz" role="tab" aria-selected="false">
+          <span class="tab-ico">🏆</span> Nutrition Quiz
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="app-main container">
+
+    <!-- =====================================================================
+         VIEW 1: NUTRIENT TAXONOMY & DOSSIERS
+         ===================================================================== -->
+    <section class="module-view active" id="viewNutrients" aria-label="Nutrient Taxonomy">
+      <div class="module-hero">
+        <div class="hero-text-wrap">
+          <span class="hero-badge">30+ Essential Biochemical Nutrients</span>
+          <h2 class="hero-heading">The Human Biochemical Blueprint</h2>
+          <p class="hero-subtext">Every vitamin, mineral, essential amino acid, and lipid required by human cellular physiology to sustain vitality, DNA synthesis, enzymatic action, and longevity.</p>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-controls-row">
+        <div class="filter-pills" id="nutrientCategoryPills" role="tablist" aria-label="Filter by nutrient category">
+          <button type="button" class="filter-pill active" data-cat="all">All Nutrients (30+)</button>
+          <button type="button" class="filter-pill" data-cat="macro">Macronutrients</button>
+          <button type="button" class="filter-pill" data-cat="vitamin-fat">Fat-Soluble (A, D, E, K)</button>
+          <button type="button" class="filter-pill" data-cat="vitamin-water">B-Complex &amp; Vitamin C</button>
+          <button type="button" class="filter-pill" data-cat="mineral-major">Macrominerals</button>
+          <button type="button" class="filter-pill" data-cat="mineral-trace">Trace Elements</button>
+        </div>
+        <div class="results-count-badge" id="nutrientCountBadge">Showing 30 nutrients</div>
+      </div>
+
+      <!-- Nutrients Card Grid -->
+      <div class="nutrient-cards-grid" id="nutrientsGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VIEW 2: WHOLE FOODS CATALOG (REAL PHOTOGRAPHY)
+         ===================================================================== -->
+    <section class="module-view" id="viewFoods" aria-label="Whole Foods Catalog">
+      <div class="module-hero">
+        <div class="hero-text-wrap">
+          <span class="hero-badge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">60+ Real Whole Food Sources</span>
+          <h2 class="hero-heading">Nature’s Concentrated Nutrient Dispensary</h2>
+          <p class="hero-subtext">Verified, uncropped photorealistic imagery showcasing whole foods with standard portion metrics, nutrient densities, bioavailability enhancers, and dietary suitability.</p>
+        </div>
+      </div>
+
+      <!-- Food Category Filters & Dietary Flags -->
+      <div class="food-filter-panel">
+        <div class="filter-pills" id="foodCategoryPills" role="tablist" aria-label="Filter by food family">
+          <button type="button" class="filter-pill active" data-fcat="all">All Foods (60)</button>
+          <button type="button" class="filter-pill" data-fcat="fish-seafood">🐟 Seafood &amp; Fish</button>
+          <button type="button" class="filter-pill" data-fcat="greens-vegetables">🥦 Greens &amp; Vegetables</button>
+          <button type="button" class="filter-pill" data-fcat="fruits-berries">🫐 Fruits &amp; Berries</button>
+          <button type="button" class="filter-pill" data-fcat="nuts-seeds">🥜 Nuts &amp; Seeds</button>
+          <button type="button" class="filter-pill" data-fcat="legumes-pulses">🫘 Legumes &amp; Pulses</button>
+          <button type="button" class="filter-pill" data-fcat="dairy-eggs">🥚 Dairy &amp; Eggs</button>
+          <button type="button" class="filter-pill" data-fcat="whole-grains">🌾 Whole Grains</button>
+          <button type="button" class="filter-pill" data-fcat="meats-poultry">🥩 Meats &amp; Organ Meats</button>
+        </div>
+
+        <div class="dietary-tags-toggles" id="dietaryTogglesRow">
+          <span class="dietary-toggle-label">Dietary Filters:</span>
+          <button type="button" class="dietary-btn" data-flag="vegan">🌱 Vegan</button>
+          <button type="button" class="dietary-btn" data-flag="vegetarian">🥛 Vegetarian</button>
+          <button type="button" class="dietary-btn" data-flag="pescatarian">🐟 Pescatarian</button>
+          <button type="button" class="dietary-btn" data-flag="gluten-free">🌾 Gluten-Free</button>
+          <button type="button" class="dietary-btn" data-flag="dairy-free">🧀 Dairy-Free</button>
+          <button type="button" class="dietary-btn" data-flag="keto">🥑 Low-Carb / Keto</button>
+        </div>
+      </div>
+
+      <!-- Foods Cards Grid -->
+      <div class="food-cards-grid" id="foodsGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VIEW 3: PERSONALIZED RDA / DRI CALCULATOR
+         ===================================================================== -->
+    <section class="module-view" id="viewCalculator" aria-label="Personalized RDA Calculator">
+      <div class="module-hero">
+        <div class="hero-text-wrap">
+          <span class="hero-badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">NIH &amp; EFSA Scientific Dietary Standards</span>
+          <h2 class="hero-heading">Personalized Daily Intake Engine</h2>
+          <p class="hero-subtext">Nutrient requirements shift drastically with age, biological sex, athletic volume, and life stages. Calculate your precise Recommended Dietary Allowance (RDA) and safe Upper Tolerable Limits (UL).</p>
+        </div>
+      </div>
+
+      <div class="calculator-layout-grid">
+        <!-- Interactive Inputs Form -->
+        <div class="calculator-inputs-card">
+          <h3 class="calc-section-title">Your Physiological Profile</h3>
+
+          <div class="calc-form-group">
+            <div class="slider-header">
+              <label for="calcAgeSlider">Age: <span id="calcAgeVal" class="slider-badge">30 years</span></label>
+              <span class="calc-bracket-note" id="calcLifeStageTag">Adult (19–50 yrs)</span>
+            </div>
+            <input type="range" id="calcAgeSlider" class="form-range-slider" min="4" max="85" value="30" step="1">
+          </div>
+
+          <div class="calc-form-group">
+            <label class="form-label-txt">Biological Sex &amp; Life Stage</label>
+            <div class="radio-pill-group" id="calcSexGroup">
+              <button type="button" class="radio-pill active" data-sex="male">♂ Male</button>
+              <button type="button" class="radio-pill" data-sex="female">♀ Female</button>
+              <button type="button" class="radio-pill" data-sex="pregnant">🤰 Pregnant</button>
+              <button type="button" class="radio-pill" data-sex="lactating">🤱 Lactating</button>
+            </div>
+          </div>
+
+          <div class="calc-form-group">
+            <label class="form-label-txt">Physical Activity Level</label>
+            <div class="radio-pill-group" id="calcActivityGroup">
+              <button type="button" class="radio-pill active" data-act="sedentary">🛋️ Sedentary</button>
+              <button type="button" class="radio-pill" data-act="moderate">🚶 Moderate Active</button>
+              <button type="button" class="radio-pill" data-act="athlete">🏃 High Athletic / Heavy</button>
+            </div>
+          </div>
+
+          <div class="calc-form-group">
+            <label class="form-label-txt">Primary Dietary Pattern</label>
+            <div class="radio-pill-group" id="calcDietGroup">
+              <button type="button" class="radio-pill active" data-diet="omnivore">🥩 Omnivore</button>
+              <button type="button" class="radio-pill" data-diet="vegetarian">🥛 Vegetarian</button>
+              <button type="button" class="radio-pill" data-diet="vegan">🌱 Vegan</button>
+              <button type="button" class="radio-pill" data-diet="lowcarb">🥑 Low-Carb / Keto</button>
+            </div>
+          </div>
+
+          <div class="calc-alert-box" id="calcClinicalAlert">
+            <span class="alert-icon">💡</span>
+            <span class="alert-text" id="calcAlertMsg">Standard adult baseline active. Adjust sliders to see personalized adjustments.</span>
+          </div>
+        </div>
+
+        <!-- Calculated Target Telemetry Table -->
+        <div class="calculator-results-card">
+          <div class="results-header-row">
+            <div>
+              <h3 class="calc-section-title" style="margin-bottom: 0.2rem;">Custom Daily Nutrient Targets</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Calibrated against Dietary Reference Intakes (DRI)</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" id="btnApplyRdaToPlate">Apply to My Daily Plate ↗</button>
+          </div>
+
+          <div class="target-metrics-table-wrap">
+            <table class="target-table">
+              <thead>
+                <tr>
+                  <th>Nutrient</th>
+                  <th>Target (RDA / AI)</th>
+                  <th>Upper Limit (UL)</th>
+                  <th>Clinical Focus</th>
+                </tr>
+              </thead>
+              <tbody id="calcTargetsTableBody">
+                <!-- Injected dynamically by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VIEW 4: INTERACTIVE DAILY PLATE TRACKER
+         ===================================================================== -->
+    <section class="module-view" id="viewPlate" aria-label="Interactive Daily Plate Tracker">
+      <div class="module-hero">
+        <div class="hero-text-wrap">
+          <span class="hero-badge" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8; border-color: rgba(6, 182, 212, 0.3);">Real-Time Dietary Telemetry</span>
+          <h2 class="hero-heading">The Interactive Daily Nutrition Plate</h2>
+          <p class="hero-subtext">Assemble your meals across the day. Dynamic telemetry gauges compute cumulative fulfillment of essential macronutrients, vitamins, and minerals against your daily target in real time.</p>
+        </div>
+      </div>
+
+      <div class="plate-builder-layout">
+        
+        <!-- Left Column: Meal Slots & Food Adders -->
+        <div class="plate-meals-column">
+          <div class="plate-action-bar">
+            <span class="plate-status-txt" id="plateTotalFoodsCount">0 items logged today</span>
+            <div style="display: flex; gap: 0.5rem;">
+              <button type="button" class="btn btn-secondary btn-sm" id="btnSamplePlateMed">Preset: Mediterranean Diet</button>
+              <button type="button" class="btn btn-secondary btn-sm" id="btnSamplePlateVegan">Preset: Plant-Powered</button>
+              <button type="button" class="btn btn-danger btn-sm" id="btnClearPlate">Clear Plate</button>
+            </div>
+          </div>
+
+          <!-- Meal Slot: Breakfast -->
+          <div class="meal-slot-card" data-slot="breakfast">
+            <div class="meal-slot-header">
+              <div class="slot-title-wrap">
+                <span class="slot-icon">🌅</span>
+                <div>
+                  <h4 class="slot-title">Breakfast &amp; Morning</h4>
+                  <span class="slot-item-count" id="countBreakfast">0 items</span>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm btn-add-food-trigger" data-slot="breakfast">+ Add Food</button>
+            </div>
+            <div class="meal-slot-items" id="itemsBreakfast">
+              <p class="slot-empty-msg">No foods logged yet. Click "+ Add Food" to add.</p>
+            </div>
+          </div>
+
+          <!-- Meal Slot: Lunch -->
+          <div class="meal-slot-card" data-slot="lunch">
+            <div class="meal-slot-header">
+              <div class="slot-title-wrap">
+                <span class="slot-icon">☀️</span>
+                <div>
+                  <h4 class="slot-title">Lunch &amp; Midday</h4>
+                  <span class="slot-item-count" id="countLunch">0 items</span>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm btn-add-food-trigger" data-slot="lunch">+ Add Food</button>
+            </div>
+            <div class="meal-slot-items" id="itemsLunch">
+              <p class="slot-empty-msg">No foods logged yet. Click "+ Add Food" to add.</p>
+            </div>
+          </div>
+
+          <!-- Meal Slot: Dinner -->
+          <div class="meal-slot-card" data-slot="dinner">
+            <div class="meal-slot-header">
+              <div class="slot-title-wrap">
+                <span class="slot-icon">🌙</span>
+                <div>
+                  <h4 class="slot-title">Dinner &amp; Evening</h4>
+                  <span class="slot-item-count" id="countDinner">0 items</span>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm btn-add-food-trigger" data-slot="dinner">+ Add Food</button>
+            </div>
+            <div class="meal-slot-items" id="itemsDinner">
+              <p class="slot-empty-msg">No foods logged yet. Click "+ Add Food" to add.</p>
+            </div>
+          </div>
+
+          <!-- Meal Slot: Snacks -->
+          <div class="meal-slot-card" data-slot="snacks">
+            <div class="meal-slot-header">
+              <div class="slot-title-wrap">
+                <span class="slot-icon">🍏</span>
+                <div>
+                  <h4 class="slot-title">Snacks &amp; Hydration</h4>
+                  <span class="slot-item-count" id="countSnacks">0 items</span>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm btn-add-food-trigger" data-slot="snacks">+ Add Food</button>
+            </div>
+            <div class="meal-slot-items" id="itemsSnacks">
+              <p class="slot-empty-msg">No foods logged yet. Click "+ Add Food" to add.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Real-Time %DV Telemetry Dashboard -->
+        <div class="plate-telemetry-column">
+          <div class="telemetry-card-sticky">
+            <div class="telemetry-header">
+              <h3 class="calc-section-title" style="margin-bottom: 0.2rem;">Daily Intake Telemetry</h3>
+              <span class="target-profile-pill" id="plateProfileTag">Profile: Adult Male (30y)</span>
+            </div>
+
+            <!-- Energy & Macros Summary Chips -->
+            <div class="macro-chips-row">
+              <div class="macro-chip">
+                <span class="macro-chip-lbl">Energy</span>
+                <span class="macro-chip-val" id="plateTotalCalories">0 kcal</span>
+              </div>
+              <div class="macro-chip">
+                <span class="macro-chip-lbl">Protein</span>
+                <span class="macro-chip-val" id="plateTotalProtein">0 g</span>
+              </div>
+              <div class="macro-chip">
+                <span class="macro-chip-lbl">Fiber</span>
+                <span class="macro-chip-val" id="plateTotalFiber">0 g</span>
+              </div>
+              <div class="macro-chip">
+                <span class="macro-chip-lbl">Fat</span>
+                <span class="macro-chip-val" id="plateTotalFat">0 g</span>
+              </div>
+            </div>
+
+            <!-- Micronutrient Live Progress Gauges -->
+            <div class="telemetry-meters-list" id="plateTelemetryMeters">
+              <!-- Rendered dynamically by app.js -->
+            </div>
+
+            <!-- Clinical Insights & Deficiency Warnings -->
+            <div class="plate-clinical-summary" id="plateClinicalSummary">
+              <div class="summary-insight-card">
+                <span class="insight-icon">🔍</span>
+                <p class="insight-text">Add whole foods to your daily meals to see your nutrient fulfillment meters and bioavailability advice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VIEW 5: NUTRIENT SYNERGIES & "POWER PAIRS" MATRIX
+         ===================================================================== -->
+    <section class="module-view" id="viewSynergies" aria-label="Nutrient Synergies and Bioavailability">
+      <div class="module-hero">
+        <div class="hero-text-wrap">
+          <span class="hero-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">Bioavailability &amp; Pairing Biochemistry</span>
+          <h2 class="hero-heading">Nutrient Synergies: The Power of Food Pairing</h2>
+          <p class="hero-subtext">Nutrients rarely act in isolation. Certain vitamins multiply the absorption of co-factors by up to 2,000%, while competing minerals can shut down intestinal uptake.</p>
+        </div>
+      </div>
+
+      <!-- Synergies vs Inhibitors Sections -->
+      <div class="synergy-showcase-grid">
+        <!-- Power Pairs -->
+        <div class="synergy-category-box">
+          <div class="box-badge-header">
+            <span class="box-badge-icon">⚡</span>
+            <div>
+              <h3 class="box-badge-title">Synergistic "Power Pairs" (Absorption Boosters)</h3>
+              <p class="box-badge-sub">Combine these nutrients in the same meal for peak biological assimilation.</p>
+            </div>
+          </div>
+          <div class="synergy-cards-list" id="powerPairsList">
+            <!-- Dynamic pairs rendered by app.js -->
+          </div>
+        </div>
+
+        <!-- Competing Inhibitors -->
+        <div class="synergy-category-box">
+          <div class="box-badge-header">
+            <span class="box-badge-icon" style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border-color: rgba(244, 63, 94, 0.3);">⛔</span>
+            <div>
+              <h3 class="box-badge-title">Nutrient Blockers &amp; Inhibitors (Space Apart)</h3>
+              <p class="box-badge-sub">Compounds that compete for transport channels or bind minerals into insoluble complexes.</p>
+            </div>
+          </div>
+          <div class="synergy-cards-list" id="blockersList">
+            <!-- Dynamic blockers rendered by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VIEW 6: DEFICIENCY & SYMPTOM DIAGNOSTIC GUIDE
+         ===================================================================== -->
+    <section class="module-view" id="viewSymptoms" aria-label="Nutrient Deficiency and Symptom Diagnostic Guide">
+      <div class="module-hero">
+        <div class="hero-text-wrap">
+          <span class="hero-badge" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border-color: rgba(239, 68, 68, 0.3);">Clinical Symptom Tracer</span>
+          <h2 class="hero-heading">What Is Your Body Asking For?</h2>
+          <p class="hero-subtext">Sub-clinical micronutrient deficiencies frequently manifest as early physical signals. Explore physiological symptoms to trace possible nutritional root causes and their top food sources.</p>
+        </div>
+      </div>
+
+      <!-- Symptom Search & Category Filter -->
+      <div class="symptom-search-bar">
+        <input type="search" id="symptomSearchInput" class="search-input" placeholder="Search physical symptoms (e.g., fatigue, cramps, brittle nails, brain fog)...">
+      </div>
+
+      <div class="symptom-category-pills" id="symptomCategoryPills">
+        <button type="button" class="filter-pill active" data-scat="all">All Signals (18)</button>
+        <button type="button" class="filter-pill" data-scat="energy">⚡ Energy &amp; Fatigue</button>
+        <button type="button" class="filter-pill" data-scat="muscles">💪 Muscle &amp; Nerve</button>
+        <button type="button" class="filter-pill" data-scat="skin">💅 Skin, Hair &amp; Nails</button>
+        <button type="button" class="filter-pill" data-scat="immune">🛡️ Immune &amp; Healing</button>
+        <button type="button" class="filter-pill" data-scat="cognition">🧠 Cognition &amp; Mood</button>
+        <button type="button" class="filter-pill" data-scat="bones">🦴 Bone &amp; Dental</button>
+      </div>
+
+      <!-- Symptom Cards Grid -->
+      <div class="symptom-cards-grid" id="symptomCardsGrid">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VIEW 7: CLINICAL NUTRITION MASTERY QUIZ
+         ===================================================================== -->
+    <section class="module-view" id="viewQuiz" aria-label="Clinical Nutrition Mastery Quiz">
+      <div class="module-hero">
+        <div class="hero-text-wrap">
+          <span class="hero-badge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Gamified Knowledge Challenge</span>
+          <h2 class="hero-heading">Nutritional IQ &amp; Bioavailability Challenge</h2>
+          <p class="hero-subtext">Test your mastery of human micronutrient biochemistry, daily requirements, absorption physics, and food nutrition densitometry.</p>
+        </div>
+      </div>
+
+      <div class="quiz-container-box">
+        <!-- Tier Selection Screen -->
+        <div id="quizSetupScreen" class="quiz-screen active">
+          <h3 class="quiz-screen-title">Select Your Nutrition Challenge Tier</h3>
+          <p class="quiz-screen-sub">Choose a difficulty level to test your dietary knowledge.</p>
+
+          <div class="quiz-tier-cards-row">
+            <div class="quiz-tier-card" data-tier="beginner">
+              <span class="tier-icon">🥗</span>
+              <h4 class="tier-title">Everyday Nutritionist</h4>
+              <p class="tier-desc">Essential daily vitamins, simple food sources, and general dietary fundamentals.</p>
+              <button type="button" class="btn btn-primary btn-start-tier" data-tier="beginner">Start Level 1 →</button>
+            </div>
+
+            <div class="quiz-tier-card" data-tier="intermediate">
+              <span class="tier-icon">🥑</span>
+              <h4 class="tier-title">Whole-Food Explorer</h4>
+              <p class="tier-desc">Mineral absorption, RDA nuances, dietary deficiencies, and nutrient densitometry.</p>
+              <button type="button" class="btn btn-primary btn-start-tier" data-tier="intermediate">Start Level 2 →</button>
+            </div>
+
+            <div class="quiz-tier-card" data-tier="advanced">
+              <span class="tier-icon">🧪</span>
+              <h4 class="tier-title">Clinical Biochemist</h4>
+              <p class="tier-desc">Cellular co-factors, enzymatic pathways, bioavailability competition, and upper safety limits.</p>
+              <button type="button" class="btn btn-primary btn-start-tier" data-tier="advanced">Start Level 3 →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Question Screen -->
+        <div id="quizPlayScreen" class="quiz-screen">
+          <div class="quiz-hud-bar">
+            <span class="quiz-hud-tag" id="quizTierLabel">Tier: Everyday Nutritionist</span>
+            <span class="quiz-hud-progress" id="quizQuestionCounter">Question 1 of 5</span>
+            <span class="quiz-hud-score" id="quizScoreDisplay">Score: 0</span>
+          </div>
+
+          <div class="quiz-question-box">
+            <h3 class="quiz-question-text" id="quizQuestionText">Loading question...</h3>
+            <div class="quiz-options-list" id="quizOptionsList">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <div class="quiz-feedback-box" id="quizFeedbackBox" style="display: none;">
+            <p class="quiz-explanation" id="quizExplanationText"></p>
+            <button type="button" class="btn btn-primary" id="btnNextQuestion">Next Question →</button>
+          </div>
+        </div>
+
+        <!-- Quiz Completion Screen -->
+        <div id="quizResultsScreen" class="quiz-screen">
+          <div class="results-trophy-avatar" id="quizTrophyIcon">🏆</div>
+          <h3 class="results-main-title" id="quizFinalTitle">Master of Nutrition!</h3>
+          <p class="results-score-line" id="quizFinalScoreLine">You scored 5 out of 5 (100%)</p>
+          <p class="results-summary-text" id="quizFinalComment">Outstanding! Your grasp of micronutrient biochemistry and dietary wellness is exemplary.</p>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+            <button type="button" class="btn btn-primary" id="btnRestartQuiz">Play Another Tier ↺</button>
+            <button type="button" class="btn btn-secondary" id="btnBackToNutrients">Explore Nutrients ↗</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       MODAL 1: NUTRIENT DEEP DOSSIER MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop hidden" id="nutrientModalBackdrop" aria-hidden="true">
+    <div class="modal-dialog modal-dossier" role="dialog" aria-modal="true" aria-labelledby="nutrientModalTitle">
+      <button type="button" class="modal-close-btn" id="nutrientModalCloseBtn" aria-label="Close Nutrient Dossier">✕</button>
+      <div class="modal-scroll-body" id="nutrientModalContent">
+        <!-- Injected dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 2: FOOD RESOURCE MICRONUTRIENT BREAKDOWN MODAL (UNCROPPED REAL PHOTO)
+       ========================================================================= -->
+  <div class="modal-backdrop hidden" id="foodModalBackdrop" aria-hidden="true">
+    <div class="modal-dialog modal-dossier" role="dialog" aria-modal="true" aria-labelledby="foodModalTitle">
+      <button type="button" class="modal-close-btn" id="foodModalCloseBtn" aria-label="Close Food Details">✕</button>
+      <div class="modal-scroll-body" id="foodModalContent">
+        <!-- Injected dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 3: QUICK FOOD SELECTOR PICKER (FOR DAILY PLATE MEALS)
+       ========================================================================= -->
+  <div class="modal-backdrop hidden" id="foodPickerModalBackdrop" aria-hidden="true">
+    <div class="modal-dialog modal-picker" role="dialog" aria-modal="true">
+      <button type="button" class="modal-close-btn" id="foodPickerCloseBtn" aria-label="Close Food Picker">✕</button>
+      <div class="picker-inner-pad">
+        <h3 class="calc-section-title" id="foodPickerModalTitle">Add Whole Food to Breakfast</h3>
+        <input type="search" id="foodPickerSearchInput" class="search-input" placeholder="Search food to add..." style="margin-bottom: 1rem;">
+        <div class="food-picker-scroll-grid" id="foodPickerGrid">
+          <!-- Food choices injected dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Footer -->
+  <footer class="app-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand-wrap">
+        <span class="footer-icon">🥑</span>
+        <div>
+          <span class="footer-name">The Vital Fuel: Human Nutrition &amp; Nutrient Health Explorer</span>
+          <p class="footer-desc">An interactive open-access reference app celebrating human nutritional biochemistry. Scientific standards based on NIH Office of Dietary Supplements &amp; EFSA Dietary Reference Values.</p>
+        </div>
+      </div>
+      <div class="footer-nav-links">
+        <a href="https://mahesh-yennam.github.io/Gamility/explorer.html">Explorer Hub</a>
+        <a href="https://mahesh-yennam.github.io/Animal-Encyclopedia/">Animal Encyclopedia</a>
+        <a href="https://mahesh-yennam.github.io/Deep-Ocean-Odyssey/">Deep Ocean Odyssey</a>
+        <a href="https://mahesh-yennam.github.io/Gamility/explorer/musical-instruments/index.html">Musical Instruments</a>
+        <a href="https://mahesh-yennam.github.io/World-Atlas/">World Atlas</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "nutriguide-health-explorer",
+  "version": "1.0.0",
+  "description": "Interactive scientific explorer of essential human nutrients, daily requirements (RDA/DRI), whole food sources, and meal telemetry.",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "nutrition",
+    "vitamins",
+    "minerals",
+    "macronutrients",
+    "rda",
+    "dri",
+    "health",
+    "diet",
+    "gamility"
+  ],
+  "author": "Gamility Open Education",
+  "license": "MIT"
+}
